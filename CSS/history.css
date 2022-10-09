@@ -1,0 +1,791 @@
+*,html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    height: 100%;
+}
+
+.wrapper{
+    overflow: hidden;
+}
+
+body{
+    font-family: 'Poppins',sans-serif;
+    scroll-behavior: smooth;
+    color: black;
+    overflow: hidden;
+    background-color: #404040;
+    height: 100%;
+}
+
+.history-nav{
+    color:#E0B589;
+}
+
+::-webkit-scrollbar {
+    width: 20px;
+  }
+
+  ::-webkit-scrollbar-track-piece {
+    background: #404040;
+  }
+   
+  ::-webkit-scrollbar-thumb {
+      background: #505050;
+  }
+
+.title a {
+    font-size: 30px;
+    font-family: 'Kanit', sans-serif;
+    text-decoration: none;
+    color: inherit;
+}
+
+.title a span{
+    font-weight: bolder;
+    transition: all 300ms ease-in;
+}
+
+.title a span:hover{
+    background-clip: text;
+	background-image: url('Screenshot 2022-05-31 214844.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 145px 23px;
+	color: transparent;
+    -webkit-background-clip: text;
+    transition: all 300ms ease-out;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 32px 140px 32px 140px;
+    box-shadow: 0 20px 20px rgb(0 0 0 / 0.2);
+    background-color: #f4f4f4;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+}
+
+nav ul li a{
+    text-decoration: none;
+    font-weight: 1000;
+    transition: all 300ms ease-in;
+    color: inherit;
+}
+
+nav ul li a:hover{
+    color: #E0B589;
+    transition: all 300ms ease-out;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+}
+
+nav ul li{
+    list-style-type: none;
+    margin-left:40px;
+}
+
+.container .video video{
+    width: 100% !important;
+    height: 100vh;
+    opacity: 0.65;
+    object-fit: cover;
+    position: absolute;
+    display: block;
+}
+
+.history-starts .image{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 3%;
+}
+
+.typewriter .firstOne h1{
+    position: absolute;
+    top: 50%;
+    color: #f4f4f4;
+    font-size: 50px;
+    transform: translateY(-50%);
+    left: 5%;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing2 3.5s steps(30, end),
+      blink-caret .5s step-end infinite,
+      disappear 3.5s forwards;
+}
+
+.typewriter .secondOne h1{
+    position: absolute;
+    top: 58%;
+    color: #f4f4f4;
+    font-size: 50px;
+    visibility: hidden;
+    transform: translateY(-50%);
+    left: 5%;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(30, end),
+      blink-caret .5s step-end infinite,
+      appear 3.5s infinite;
+    animation-delay: 3.5s;
+}
+
+@keyframes appear{
+    from{visibility: hidden;}to{
+        visibility: visible;
+    }
+}
+
+@keyframes disappear{
+    0%{
+        border-right:  .15em solid orange;
+    }
+    99%{
+        border-right: .15em solid orange;
+    }
+    100%{
+        border-right: 0em solid;
+    }
+}
+
+@keyframes typing2 {
+    from { width: 0 }
+    to { width: 28% }
+  }
+    
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 50% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange }
+  }
+
+
+.clock img{
+    position: absolute;
+    right: 0;
+    top:0;
+    margin-right:30px;
+    margin-top: 120px;
+    width: 50px;
+    height: 50px;
+}
+
+section{
+    height: 100vh;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f4f4f4;
+    scroll-snap-align: center;
+    position: relative;
+}
+
+section p{
+    width: 50%;
+    text-align: center;
+}
+
+.history-starts{
+    scroll-snap-type: y mandatory;
+    overflow-y:scroll;
+    display: block;
+    position:relative;
+    height: 100vh;
+    top: -100px;
+}
+
+.one video{
+    width: 100% !important;
+    height: 100vh;
+    opacity: 0.65;
+    object-fit: cover;
+    position: absolute;
+    display: block;
+    z-index: -2;
+}
+
+.two video{
+    width: 100% !important;
+    height: 100vh;
+    opacity: 0.45;
+    object-fit: cover;
+    position: absolute;
+    display: block;
+    z-index: -2;
+}
+
+.three video{
+    width: 100% !important;
+    height: 100vh;
+    opacity: 0.35;
+    object-fit: cover;
+    position: absolute;
+    display: block;
+    z-index: -2;
+}
+
+.four video{
+    width: 100% !important;
+    height: 100vh;
+    opacity: 0.45;
+    object-fit: cover;
+    position: absolute;
+    display: block;
+    z-index: -2;
+}
+
+.five video{
+    width: 100% !important;
+    height: 100vh;
+    opacity: 0.35;
+    object-fit: cover;
+    position: absolute;
+    display: block;
+    z-index: -2;
+}
+
+.six video{
+    width: 100% !important;
+    height: 100vh;
+    opacity: 0.35;
+    object-fit: cover;
+    position: absolute;
+    display: block;
+    z-index: -2;
+}
+
+.seven video{
+    width: 100% !important;
+    height: 100vh;
+    opacity: 0.25;
+    object-fit: cover;
+    position: absolute;
+    display: block;
+    z-index: -2;
+}
+
+.history-starts .history-started h1{
+    font-size: 100px;
+}
+
+.barsOne,.barsTwo,.barsThree,.barsFour,.barsFive,.barsSix,.barsSeven{
+    position: relative;
+}
+
+.barsOne h3{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 0%;
+    color: black;
+    margin-bottom: 2%;
+}
+
+.barsThree .barsThree2{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 0%;
+    color: black;
+    margin-bottom: 3.5%;
+}
+
+.barsSeven h3{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 0%;
+    margin-top: 8%;
+    color: black;
+}
+
+.barsFour .barsFour2{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 0%;
+    color: black;
+    margin-bottom: 3.5%;
+}
+
+.barsFive .barsFive2{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 0%;
+    color: black;
+    margin-bottom: 3.5%;
+}
+
+.barsSix .barsSix2{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 0%;
+    color: black;
+    margin-bottom: 3.5%;
+}
+
+.barsSeven .barsSeven2 img{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0%;
+    margin-bottom: 2%;
+    width: 25px;
+    height: 25px;
+}
+
+
+.barOne{
+    position: absolute;
+    left: 50%;
+    background-color: black;
+    width: 1px;
+    height: 300px;
+    margin-top: 20px;
+}
+
+.barsTwo h3{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 0%;
+    margin-top: 8%;
+    color: black;
+}
+
+.barsTwo .barsTwo2 h3{
+    margin-left: 20px;
+}
+
+.barsFour h3{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 0%;
+    margin-top: 8%;
+    color: black;
+}
+
+.barsFive h3{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 0%;
+    margin-top: 8%;
+    color: black;
+}
+
+.barsSix h3{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 0%;
+    margin-top: 8%;
+    color: black;
+}
+
+.barsOne img{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0%;
+    width: 25px;
+    height: 25px;
+    margin-top: 8.3%;
+    color: black;
+}
+
+.barsThree h3{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 0%;
+    margin-top: 8%;
+    color: black;
+}
+
+.barSeven2{
+    position: absolute;
+    left: 50%;
+    bottom: 0%;
+    background-color: black;
+    width: 1px;
+    height: 200px;
+    margin-bottom: 5%;
+}
+
+.barOne2{
+    position: absolute;
+    left: 50%;
+    bottom: 0%;
+    background-color: black;
+    width: 1px;
+    height: 200px;
+    margin-bottom: 5%;
+}
+
+.barOne{
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    margin-top: 11%;
+    background-color: black;
+    width: 1px;
+    height: 150px;
+    margin-bottom: 5%;
+}
+
+.barTwo{
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    margin-top: 11%;
+    background-color: black;
+    width: 1px;
+    height: 150px;
+    margin-bottom: 5%;
+}
+
+.barTwo2{
+    position: absolute;
+    left: 50%;
+    bottom: 0%;
+    background-color: black;
+    width: 1px;
+    height: 200px;
+    margin-bottom: 5%;
+}
+
+.barsTwo{
+    color: black;
+}
+
+.barsTwo .barsTwo2{
+    position: absolute;
+    left: 48.7%;
+    bottom: 0%;
+    color: black;
+    margin-bottom: 3.5%;
+}
+
+.barThree{
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    margin-top: 11%;
+    background-color: black;
+    width: 1px;
+    height: 150px;
+    margin-bottom: 5%;
+}
+
+.barThree2{
+    position: absolute;
+    left: 50%;
+    bottom: 0%;
+    background-color: black;
+    width: 1px;
+    height: 200px;
+    margin-bottom: 5%;
+}
+
+.barFour{
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    margin-top: 11%;
+    background-color: black;
+    width: 1px;
+    height: 150px;
+    margin-bottom: 5%;
+}
+
+.barFour2{
+    position: absolute;
+    left: 50%;
+    bottom: 0%;
+    background-color: black;
+    width: 1px;
+    height: 200px;
+    margin-bottom: 5%;
+}
+
+.barFive{
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    margin-top: 11%;
+    background-color: black;
+    width: 1px;
+    height: 150px;
+    margin-bottom: 5%;
+}
+
+.barFive2{
+    position: absolute;
+    left: 50%;
+    bottom: 0%;
+    background-color: black;
+    width: 1px;
+    height: 200px;
+    margin-bottom: 5%;
+}
+
+.barSix{
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    margin-top: 11%;
+    background-color: black;
+    width: 1px;
+    height: 150px;
+    margin-bottom: 5%;
+}
+
+.barSix2{
+    position: absolute;
+    left: 50%;
+    bottom: 0%;
+    background-color: black;
+    width: 1px;
+    height: 200px;
+    margin-bottom: 5%;
+}
+
+.barSeven{
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    margin-top: 11%;
+    background-color: black;
+    width: 1px;
+    height: 150px;
+    margin-bottom: 5%;
+}
+
+.history-starts h2{
+    margin-bottom: 15px;
+}
+
+.burger div{
+    background-color: red;
+    width: 25px;
+    height: 3px;
+    border-radius: 10px;
+    transition: all 50ms ease;
+}
+
+.burger{
+    position: absolute;
+    z-index: 3;
+    right: 0;
+    top: 50%;
+    margin-right: 60px;
+    transform: translateY(-50%);
+    visibility: hidden;
+}
+
+.burger .burger-bar2{
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.burger:hover{
+    cursor: pointer;
+}
+
+.addIt2{
+    background-color: #303030;
+}
+
+.addIt{
+    display: none;
+}
+
+.addIt3{
+    visibility: visible;
+}
+
+.addIt4{
+    flex-direction: column;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, 250%);
+}
+
+.turnIt{
+    transform: rotate(45deg) translateY(11px);
+    transition: all 50ms ease;
+}
+
+.turnIt2{
+    visibility: hidden;
+}
+
+.turnIt3{
+    transform: rotate(-45deg) translateY(-11px);
+    transition: all 50ms ease;
+}
+
+@media only screen and (max-width: 400px) {
+    .barOne,.barOne2,.barTwo,.barTwo2,.barThree,.barThree2,.barFour,.barFour2,.barFive,.barFive2,.barSix,.barSix2,.barSeven,.barSeven2{
+        visibility: hidden;
+    }
+
+    nav{
+        padding: 32px 40px 32px 40px;
+    }
+
+    body{
+        font-size: small;
+    }
+
+    .barsOne .barsOne2,.barsTwo .barsTwo2,.barsThree .barsThree2,.barsFour .barsFour2,.barsFive .barsFive2,.barsSix .barsSix2,.barsSeven .barsSeven2{
+        visibility: hidden;
+    }
+
+    .barsOne h3,.barsTwo h3,.barsThree h3,.barsFour h3,.barsFive h3,.barsSix h3,.barsSeven h3{
+        visibility: hidden;
+    }
+}   
+
+
+@media only screen and (max-width: 600px){
+	/*Big smartphones [426px -> 600px]*/
+
+    nav{
+        padding: 32px 40px 32px 40px;
+    }
+
+    .history-starts .image{
+        width: 25px;
+        height: 25px;
+        bottom: 8%;
+    }
+
+    .typewriter .firstOne h1{
+        font-size: 15px;
+    }
+    
+    .typewriter .secondOne h1{
+        font-size: 15px;
+        top: 54%;
+    }
+
+    .clock img{
+        margin-right:20px;
+        margin-top: 110px;
+        width: 25px;
+        height: 25px;
+    }
+
+
+    .title a {
+        font-size: 18px;
+    }
+
+}
+
+@media only screen and (max-width: 1300px){
+    .barOne,.barOne2,.barTwo,.barTwo2,.barThree,.barThree2,.barFour,.barFour2,.barFive,.barFive2,.barSix,.barSix2,.barSeven,.barSeven2{
+        height: 100px;
+    }
+
+    .barOne,.barTwo,.barThree,.barFour,.barFive,.barSix,.barSeven{
+        margin-top: 15%;
+    }
+
+    .barOne2,.barTwo2,.barThree2,.barFour2,.barFive2,.barSix2,.barSeven2{
+        margin-bottom: 10%;
+    }
+
+    .barsOne .barsOne2,.barsTwo .barsTwo2,.barsThree .barsThree2,.barsFour .barsFour2,.barsFive .barsFive2,.barsSix .barsSix2,.barsSeven .barsSeven2{
+        margin-bottom: 7%;
+    }
+    
+}
+
+@media only screen and (max-width: 900px){
+    nav ul li a{
+        font-size: 15px;
+    }
+
+    nav{
+        padding: 32px 60px 32px 60px;
+    }
+
+    nav ul li{
+        margin-left: 20px;
+    }
+
+    .barsTwo .barsTwo2 h3{
+        margin-left: 10px;
+    }
+
+    .typewriter .firstOne h1{
+        font-size: 30px;
+    }
+    
+    .typewriter .secondOne h1{
+        font-size: 30px;
+        top: 54%;
+    }
+}
+
+@media only screen and (max-width: 550px){
+
+    .typewriter .firstOne h1{
+        font-size: 18px;
+    }
+    
+    .typewriter .secondOne h1{
+        font-size: 18px;
+        top: 53%;
+    }
+}
+
+@media only screen and (max-width:800px){
+    nav ul li a{
+        visibility: hidden;
+    }
+
+    .burger{
+        visibility: visible;
+    }
+}
+
+@media only screen and (max-height: 800px){
+    .barsOne,.barsTwo,.barsThree,.barsFour,.barsFive,.barsSix,.barsSeven{
+        visibility: hidden;
+    }
+}
+
+

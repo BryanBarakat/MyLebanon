@@ -1,0 +1,714 @@
+*,html{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #303030;
+    font-family: 'Poppins',sans-serif;
+    color: black;
+    background-color: #404040;
+}
+
+
+.wrapper{
+    position: relative;
+    overflow: hidden;
+}
+
+.charity-nav{
+    color:#E0B589;
+}
+
+::-webkit-scrollbar-track-piece {
+    background: #303030;
+}
+
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #505050;
+}
+
+.title a {
+    font-size: 30px;
+    font-family: 'Kanit', sans-serif;
+    text-decoration: none;
+    color: inherit;
+}
+
+.title a span{
+    font-weight: bolder;
+    transition: all 300ms ease-in;
+}
+
+.title a span:hover{
+    background-clip: text;
+	background-image: url('Screenshot 2022-05-31 214844.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 145px 23px;
+	color: transparent;
+    -webkit-background-clip: text;
+    transition: all 300ms ease-out;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 32px 140px 32px 140px;
+    box-shadow: 0 20px 20px rgb(0 0 0 / 0.2);
+    background-color: #f4f4f4;
+    position: fixed;
+    width: 100vw;
+    z-index: 2;
+    top: 0;
+}
+
+nav ul li a{
+    text-decoration: none;
+    font-weight: 1000;
+    transition: all 300ms ease-in;
+    color: inherit;
+}
+
+nav ul li a:hover{
+    color: #E0B589;
+    transition: all 300ms ease-out;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+}
+
+nav ul li{
+    list-style-type: none;
+    margin-left:40px;
+}
+
+.quote{
+    color: #f4f4f4;
+    position: absolute;
+    left: 50%;
+    top: 8%;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+}
+
+.learn{
+    position: absolute;
+    left: 50%;
+    top: 9.5%;
+    transform: translate(-50%, -50%);
+}
+
+.numb{
+    font: 700 40px system-ui;
+}
+
+.quote{
+    font-size: 40px;
+    opacity: 1;
+}
+
+.sub-text{
+    margin-top: -15px;
+}
+
+.learn a{
+    color: #f4f4f4;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: rgba(255, 0, 0, 0.7);
+    border: #303030 solid 1px;
+}
+
+.buttons{
+    margin-top: 40px;
+}
+
+.buttons a{
+    font-weight: bolder;
+    font-size: 12px;
+    color: red;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: red solid 1px;
+    transition: all 300ms ease-in;
+}
+
+.buttons a:hover{
+    font-weight: bolder;
+    font-size: 12px;
+    color: #f4f4f4;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: rgba(255, 0, 0, 0.7);
+    border: #303030 solid 1px;
+    transition: all 300ms ease-out;
+}
+
+.bg{
+    background-image: url(panorama2.jpg);
+    width: 100%;
+    height: 600px;
+    opacity: 0.8;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: -1;
+}
+
+.desc,.desc2,.desc3{
+    transition: all 300ms ease-in;
+}
+
+@keyframes fadeInUp {
+    from { 
+        opacity: 0; transform: translate3d(0, 20px, 0); 
+    }
+    to {
+         opacity: 1; transform: none; 
+    } 
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    width: 900px;
+    height: 400px;
+    background-color: #f4f4f4;
+    justify-content: center;
+    position: absolute;
+    top: 16%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container ul{
+    list-style-type: none;
+}
+
+.container ul li{
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+.sub-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-top: 100px;
+}
+
+.sub-container div{
+    background-color: #f4f4f4;
+    padding: 120px 40px;
+    margin: 30px;
+    box-shadow: 6px 6px 6px 6px rgba(0, 0, 0, 0.2);
+}
+
+.sub-container h1{
+    margin-bottom: 30px;
+}
+
+.reasons{
+    padding-bottom: 100px;
+}
+
+.sub-container p{
+    font-family: 'Josefin Sans', sans-serif;
+    line-height: 1.5em;
+}
+
+.vid{
+    text-align: center;
+    padding: 100px auto;
+    margin-top: 100px;
+}
+
+.vid iframe{
+    position: relative;
+    z-index: 5;
+    width: 100vw;
+    height: 100vh;
+}
+
+.types_of_donations,.helping{
+    margin-top: 100px;
+    text-align: center;
+    color: #f4f4f4;
+}
+
+.helping{
+    font-size: 30px;
+    margin-top: 400px;
+}
+
+.types_of_donations .pics1{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.types_of_donations img{
+    width: 400px;
+    height: 250px;
+}
+
+.types_of_donations .pics1 .layer h3{
+    position: absolute;
+    width: 100%;
+    font-family: 'Cairo', sans-serif;
+    font-weight: 500;
+    font-size:36px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: all 200ms ease-out;
+}
+
+.bar,.bar1{
+    background-color: #f4f4f4;
+    width: 100px;
+    height: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.titled_donation h1{
+    font-size: 60px;
+}
+
+.food_donation{
+    margin-top: 40px;
+}
+
+.pics1 .pic2{
+    margin-right: 40px;
+    margin-left: 40px;
+}
+
+
+.layer{
+    background: transparent;
+    height:97.25%;
+    width:31.25%;
+    position: absolute;
+    top: 0;
+    transition: 0.5s;
+}
+
+.layer:hover{
+    background-color: #f2f2f26b;
+    cursor: pointer;
+}
+
+.types_of_donations .pics1 .layer:hover h3{
+    opacity: 1;
+    bottom: 37%;
+    transition: all 200ms ease-in;
+}
+
+.types_of_donations .pics2{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.types_of_donations .pics2 .layer h3{
+    position: absolute;
+    width: 100%;
+    font-family: 'Cairo', sans-serif;
+    font-weight: 500;
+    font-size:36px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: all 200ms ease-out;
+}
+
+.food_donation2{
+    margin-top: 420px;
+}
+
+.food_donation span,.food_donation2 span{
+    font-size: small;
+}
+
+.pics2 .picture2{
+    margin-right: 40px;
+    margin-left: 40px;
+}
+
+
+.layer{
+    background: transparent;
+    height:97.25%;
+    width:31.25%;
+    position: absolute;
+    top: 0;
+    transition: 0.5s;
+}
+
+.layer:hover{
+    background-color: #f2f2f26b;
+    cursor: pointer;
+}
+
+.pics1 a,.pics2 a{
+    color: #f4f4f4;
+}
+
+.types_of_donations .pics2 .layer:hover h3{
+    opacity: 1;
+    bottom: 37%;
+    transition: all 200ms ease-in;
+}
+
+
+footer .logos ul li a img{
+    width: 50px;
+    height: 50px;
+}
+
+footer .logos ul li a img:hover{
+    transform: scale(1.15);
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-top: 120px;
+    background-color: #555555;
+}
+
+.logos ul{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.logos ul li{
+    margin: 50px;
+}
+
+footer p{
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.verified{
+    color: #f4f4f4;
+    text-align: center;
+    margin-top: 500px;
+    margin-bottom: 400px;
+}
+
+.burger div{
+    background-color: red;
+    width: 25px;
+    height: 3px;
+    border-radius: 10px;
+    transition: all 50ms ease;
+}
+
+.burger{
+    position: absolute;
+    z-index: 3;
+    right: 0;
+    top: 50%;
+    margin-right: 60px;
+    transform: translateY(-50%);
+    visibility: hidden;
+}
+
+.burger .burger-bar2{
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.slider-container,.slider-container2{
+    display: none;
+}
+
+.burger:hover{
+    cursor: pointer;
+}
+
+.addIt2{
+    background-color: #303030;
+}
+
+.addIt{
+    display: none;
+}
+
+.addIt3{
+    visibility: visible;
+}
+
+.addIt4{
+    flex-direction: column;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, 250%);
+}
+
+.turnIt{
+    transform: rotate(45deg) translateY(11px);
+    transition: all 50ms ease;
+}
+
+.turnIt2{
+    visibility: hidden;
+}
+
+.turnIt3{
+    transform: rotate(-45deg) translateY(-11px);
+    transition: all 50ms ease;
+}
+
+@media only screen and (max-width:800px){
+    nav ul li a{
+        visibility: hidden;
+    }
+
+    .sub-container div p{
+        margin-top: 75px;
+    }
+
+    .reasons{
+        padding-bottom: 100px;
+    }
+
+    .verified{
+        font-size: small;
+        margin-top: 300px;
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+
+    .burger{
+        visibility: visible;
+    }
+
+    .sub-container{
+        grid-template-columns: 1fr;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        margin-left: 150px;
+        margin-right: 150px;
+    }
+
+    .types_of_donations .pics1{
+        display: none;
+        margin: 0%;
+    }
+
+    .helping{
+        font-size: 20px;
+        margin-top: 800px;
+    }
+
+    nav{
+        padding: 32px 40px 32px 40px;
+    }
+
+    .title a {
+        font-size: 18px;
+    }
+
+    .quote{
+        font-size: 20px;
+        width: 100%;
+        text-align: center;
+        top: 7%;
+    }
+
+    .learn{
+        top:8%;
+    }
+
+
+    .food_donation h2{
+        font-size: 20px;
+    }
+
+    .learn a{
+        padding: 7px 15px;
+        font-size: 15px;
+    }
+
+    .container{
+        font-size: smaller;
+        width: 100vw;
+        height: 100vh;
+        top: 17%;
+        grid-template-columns: 1fr;
+    }
+
+    .food_donation2{
+        margin-top: 0px;
+    }
+
+    .types_of_donations .pics2{
+        margin-top: 50px;
+        display: none;
+    }
+
+    .titled_donation h1{
+        font-size: 40px;
+    }
+
+    .bar,.bar1{
+        width: 70px;
+        height: 10px;
+    }
+
+    .slider-container,.slider-container2 {
+        height: 300px;
+        display: inline-flex;
+        overflow: hidden;
+        scrollbar-width: none;
+        transform: translateX(0);
+        will-change: transform;
+        transition: transform 0.3s ease-out;
+        cursor: grab;
+      }
+
+      .slider-container2{
+        position: absolute;
+        margin-top: 0%;
+        left: 0;
+      }
+      
+      .slide,.slide2{
+        max-height: 100vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+      }
+    
+      .slider-container .slide img,.slider-container2 .slide2 img{
+        width: 400px;
+        height: 250px;
+    }
+    
+}
+
+@media only screen and (max-width:1350px){
+    .types_of_donations img{
+        width: 300px;
+        height: 175px;
+    }
+
+    .quote{
+        font-size: 30px;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width:450px){
+    .quote{
+        font-size: 18px;
+        top: 5%;
+    }
+
+    footer .logos ul li a img{
+        width: 40px;
+        height: 40px;
+    }
+
+    .learn{
+        top:6%;
+    }
+
+    .slider-container .slide img,.slider-container2 .slide2 img{
+        width: 300px;
+        height: 200px;
+    }
+
+    nav{
+        padding: 32px 40px 32px 40px;
+    }
+    
+    .helping{
+        font-size: 15px;
+        margin-top: 900px;
+    }
+
+}
+
+@media only screen and (max-width:1000px){
+    
+    nav{
+        padding: 32px 70px 32px 70px;
+    }
+
+    .sub-container div{
+        height: 50%;
+        width: 120%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 200px 40px;
+    }
+
+    .sub-container{
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+
+    .vid{
+        margin-top: 0px;
+    }
+
+    .sub-container h1{
+        margin-bottom: 0px;
+    }
+
+    .sub-container p{
+        margin-top: 0px;
+        width: 80%;
+    }
+    
+    .types_of_donations .pics1,.types_of_donations .pics2{
+        margin-top: 150px;
+    }
+
+    .sub-container h1{
+        margin-top: -150px;
+    }
+
+    .types_of_donations img{
+        width: 200px;
+        height: 155px;
+    }
+    
+}
